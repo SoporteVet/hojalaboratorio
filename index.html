@@ -94,18 +94,9 @@
                         </div>
                     </div>
                 </section>
-                <div class="excel-integration">
-                    <div class="excel-upload">
-                        <label for="excel-file"><i class="fas fa-file-excel"></i> Cargar base de datos Excel:</label>
-                        <input type="file" id="excel-file" accept=".xlsx,.xls">
-                        <span id="db-status">No hay base de datos cargada</span>
-                    </div>
-                    <div class="id-search">
-                        <label for="customer-id"><i class="fas fa-search"></i> Buscar por ID:</label>
-                        <input type="text" id="customer-id" class="form-input" placeholder="Ingrese ID del cliente">
-                        <button type="button" id="search-btn" class="btn btn-secondary"><i class="fas fa-search"></i> Buscar</button>
-                    </div>
-                </div>
+                <button type="button" id="load-github" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> Cargar desde GitHub
+                </button>
                 <section class="notes-section">
                     <h2><i class="fas fa-clipboard"></i>Anamnesis</h2>
                     <div class="notes-container">
@@ -653,7 +644,7 @@
 async function loadExcelFromGitHub() {
     try {
         // GitHub raw file URL (replace with your own)
-        const gitHubUrl = 'https://raw.githubusercontent.com/yourusername/yourrepo/main/database.xlsx';
+        const gitHubUrl = 'https://github.com/SoporteVet/hojalaboratorio/blob/main/base%20de%20datos.xlsx';
         
         // Fetch the Excel file
         const response = await fetch(gitHubUrl);
